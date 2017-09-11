@@ -1,0 +1,6 @@
+.base {
+  min-height: 400px;
+  height: calc(100%-150px);
+  border: solid 1px #555;
+  padding: 20px;
+}
