@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import style from './counter.css';
 import { connect } from 'react-redux';
-import { add, del } from '../../actions/counter';
+import { add2, del } from '../../actions/counter';
 
 class CounterApp extends Component {
   constructor(props) {
@@ -27,7 +27,6 @@ class CounterApp extends Component {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return {
     listenCounter: state.counter
   };
@@ -36,7 +35,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     emitAdd: () => {
-      dispatch(add());
+      dispatch(add2());
     },
 
     emitDel: () => {
