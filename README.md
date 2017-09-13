@@ -7,6 +7,8 @@
 - call: expect a promisse resolve to continue other actions on the scope
 - takeEvery: all actions are executed
 - fork: not blocked, auto exec on the page when loaded
+- race: return the first result in a dispute of promises
+- select: get state in global store of the redux
 
 
 
