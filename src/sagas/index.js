@@ -2,7 +2,7 @@ import { take, all, fork, call, put, takeLatest } from 'redux-saga/effects';
 import { ADD, ADD2 } from '../constants/counter';
 import { delay } from 'redux-saga';
 
-var oi;
+var oi; //  global undefined
 
 function getName() {
   return new Promise((resolve) => {
@@ -11,7 +11,7 @@ function getName() {
     }, 3000);
   });
 }
-//dasnhjvbhjbjhasdg
+
 function *takeExec() {
   try {
     console.log('take click');
@@ -29,7 +29,7 @@ function *takeLatestExec() {
   try {
     console.log('takelatest click: ', oi);
     oi = yield call(getName); // só continua se call retornar um valor obtido por uma promisse
-    console.log('takelatest oi: ', oi);
+    console.log('takelatest oi: ', oi); // deve ser joão no console
     yield put({ type: ADD });
   } catch (error) {
     console.log('takelatest error', error);
